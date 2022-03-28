@@ -34,7 +34,7 @@ fun ViewPager2.autoScroll(interval: Long) {
     handler.post(runnable)
 }
 
-    val kedarList = listOf(
+    val badrinathList = listOf(
       PlaceImage(
           image = R.drawable.badri1
       ),

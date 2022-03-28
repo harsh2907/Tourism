@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import com.example.etourismuttrakhand.R
 import com.example.etourismuttrakhand.databinding.FragmentPlaceDetailsBinding
 import com.example.etourismuttrakhand.ui.feature_details_screen.utils.Others.autoScroll
-import com.example.etourismuttrakhand.ui.feature_details_screen.utils.Others.kedarList
+import com.example.etourismuttrakhand.ui.feature_details_screen.utils.Others.badrinathList
 import com.example.etourismuttrakhand.ui.feature_details_screen.utils.TourAdapter
 
 
@@ -26,7 +26,7 @@ class PlaceDetailsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
        val tourAdapter = TourAdapter()
-        tourAdapter.differ.submitList(kedarList)
+        tourAdapter.differ.submitList(badrinathList)
         binding.viewPagerDetails.adapter = tourAdapter
         binding.viewPagerDetails.autoScroll(1500)
 
