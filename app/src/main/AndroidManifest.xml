@@ -9,16 +9,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ETourismUttrakhand">
-        <activity
-            android:name=".ui.MainActivity"
+        <activity android:name=".ui.MainActivity"
             android:screenOrientation="portrait"
-            android:exported="true">
+            />
+        <activity
+            android:name=".ui.splash_screen.SplashScreen"
+            android:exported="true"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
