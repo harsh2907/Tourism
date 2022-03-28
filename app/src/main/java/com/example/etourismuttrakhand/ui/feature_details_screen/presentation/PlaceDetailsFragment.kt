@@ -28,7 +28,9 @@ class PlaceDetailsFragment : Fragment() {
        val tourAdapter = TourAdapter()
         tourAdapter.differ.submitList(badrinathList)
         binding.viewPagerDetails.adapter = tourAdapter
-        binding.viewPagerDetails.autoScroll(1500)
+        binding.viewPagerDetails.autoScroll(1800)
+
+        binding.openingClosingDetails.isSelected = true
 
 
     }

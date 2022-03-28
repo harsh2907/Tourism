@@ -6,7 +6,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.feature_details_screen.presentation.PlaceDetailsFragment">
 
-<androidx.viewpager2.widget.ViewPager2
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardSlider"
+        app:cardCornerRadius="6dp"
+        android:layout_width="match_parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="250dp">
+
+    <androidx.viewpager2.widget.ViewPager2
     android:layout_width="match_parent"
     android:layout_height="250dp"
     android:id="@+id/viewPagerDetails"
@@ -15,13 +24,29 @@
     app:layout_constraintRight_toRightOf="parent"
     android:background="@drawable/curve_shape"
     />
+    </androidx.cardview.widget.CardView>
+
+    <ScrollView
+        android:layout_marginTop="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardSlider"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            >
+
 
     <TextView
         android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/viewPagerDetails"
+        app:layout_constraintTop_toTopOf="parent"
         android:text="Badrinath"
         android:fontFamily="@font/ananda_namaste"
         android:textSize="40sp"
@@ -29,6 +54,7 @@
         />
 
     <TextView
+        android:id="@+id/place_desc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
@@ -41,15 +67,35 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/name" />
 
-    <TextView
-        android:id="@+id/openingDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/viewPagerDetails"
-        android:text="Badrinath"
-        android:fontFamily="@font/ananda_namaste"
-        android:textSize="40sp"
-        android:layout_margin="8dp"
-        />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/dateLL"
+                android:layout_marginTop="4dp"
+
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/place_desc"
+                >
+
+
+                <TextView
+                    android:id="@+id/openingClosingDetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:ellipsize="marquee"
+                    android:fontFamily="@font/roboto"
+                    android:singleLine="true"
+                    android:text="Gate Opening : 8 May 2022  Gate Closing :  20 Nov 2022"
+                    android:textColor="#BD5A3A"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
