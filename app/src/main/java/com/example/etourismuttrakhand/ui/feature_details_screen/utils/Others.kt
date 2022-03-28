@@ -46,4 +46,18 @@ fun ViewPager2.autoScroll(interval: Long) {
             image = R.drawable.badri6
         ),
     )
+
+    val charDham = listOf(
+        PlaceImage(image = R.drawable.kedarnath5),
+        PlaceImage(image = R.drawable.badri1),
+        PlaceImage(image = R.drawable.gangotri4),
+        PlaceImage(image = R.drawable.yamnotri1),
+    )
+
+    val popularPlaces = listOf(
+        PlaceImage(image = R.drawable.badri1),
+        PlaceImage(image = R.drawable.badri2),
+        PlaceImage(image = R.drawable.badri5),
+        PlaceImage(image = R.drawable.badri6),
+    )
 }

@@ -8,5 +8,9 @@ android:layout_height="match_parent"
 app:navGraph = "@navigation/tour_nav_graph"
 android:name="androidx.navigation.fragment.NavHostFragment"
 app:defaultNavHost = "true"
-android:id="@+id/fragment_container"
-    />
+android:id="@+id/fragment_container">
+
+
+
+
+</androidx.fragment.app.FragmentContainerView>
