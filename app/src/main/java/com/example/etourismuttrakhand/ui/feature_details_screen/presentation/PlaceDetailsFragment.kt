@@ -6,16 +6,31 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.etourismuttrakhand.R
+import com.example.etourismuttrakhand.databinding.FragmentPlaceDetailsBinding
+import com.example.etourismuttrakhand.ui.feature_details_screen.utils.Others.autoScroll
+import com.example.etourismuttrakhand.ui.feature_details_screen.utils.Others.kedarList
+import com.example.etourismuttrakhand.ui.feature_details_screen.utils.TourAdapter
 
 
 class PlaceDetailsFragment : Fragment() {
-
+    private lateinit var binding: FragmentPlaceDetailsBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_place_details, container, false)
+    ): View {
+        binding = FragmentPlaceDetailsBinding.inflate(layoutInflater)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+       val tourAdapter = TourAdapter()
+        tourAdapter.differ.submitList(kedarList)
+        binding.viewPagerDetails.adapter = tourAdapter
+        binding.viewPagerDetails.autoScroll(1500)
+
+
     }
 
 
