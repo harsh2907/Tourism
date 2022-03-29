@@ -61,7 +61,7 @@ class MainScreen : Fragment() {
         tourAdapter.differ.submitList(Others.charDham)
         binding.viewPagerDetails2.adapter = tourAdapter
         binding.viewPagerDetails2.autoScroll(1500)
-        binding.nameTv.text = "Hey! $first $last"
+
 
         tourAdapter.setOnItemClickedListener {
             val bundle  = Bundle().apply {
@@ -109,7 +109,7 @@ class MainScreen : Fragment() {
     }
 
    private fun setImages(){
-        val places = viewModel.loadPopularPlaces()
+        val places = Data.allPlaces
         binding.popular1.setImageResource(places.elementAt(0).image.random())
         binding.popularName1.text = places[0].name
         binding.popular2.setImageResource(places.elementAt(1).image.random())
@@ -125,7 +125,7 @@ class MainScreen : Fragment() {
     }
 
    private fun setLowerGrid(){
-        val places = viewModel.loadPopularPlaces()
+        val places = Data.allPlaces
         binding.popularCard1.setOnClickListener {
             val bundle = Bundle().apply {
                 putSerializable("place",places[0])

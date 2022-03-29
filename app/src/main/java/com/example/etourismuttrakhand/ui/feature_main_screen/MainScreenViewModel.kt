@@ -17,7 +17,7 @@ class MainScreenViewModel:ViewModel() {
         val places = ArrayList<Place>()
         var cnt: Int = 0
         while (cnt < 6) {
-            val element = Data.dataSource.random()
+            val element = Data.allPlaces.random()
             if (!places.contains(element)) {
                 places.add(element)
                 cnt++
@@ -28,7 +28,7 @@ class MainScreenViewModel:ViewModel() {
 
     fun searchDestination(q:String):ArrayList<Place>{
         val places = ArrayList<Place>()
-        Data.dataSource.forEach {
+        Data.allPlaces.forEach {
             if(it.name.startsWith(q))
                 places.add(it)
         }

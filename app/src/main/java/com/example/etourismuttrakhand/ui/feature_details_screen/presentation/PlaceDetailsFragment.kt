@@ -12,6 +12,8 @@ import com.example.etourismuttrakhand.ui.feature_details_screen.data.DetailsAdap
 import com.example.etourismuttrakhand.ui.feature_details_screen.utils.Others
 import com.example.etourismuttrakhand.ui.feature_details_screen.utils.Others.autoScroll
 import com.example.etourismuttrakhand.ui.feature_details_screen.utils.Others.charDham
+import com.example.etourismuttrakhand.ui.feature_details_screen.utils.Others.getHomeStay
+import com.example.etourismuttrakhand.ui.feature_details_screen.utils.Others.googleMap
 import com.example.etourismuttrakhand.ui.feature_details_screen.utils.TourAdapter
 
 
@@ -39,7 +41,13 @@ class PlaceDetailsFragment : Fragment() {
         binding.name.text= place.name
         binding.placeDesc.text = place.desc
 
+        binding.homeStay.setOnClickListener {
+            requireContext().getHomeStay(place.homeStayId)
+        }
 
+        binding.viewHotels.setOnClickListener {
+            requireContext().googleMap(place.name)
+        }
 
 
 
