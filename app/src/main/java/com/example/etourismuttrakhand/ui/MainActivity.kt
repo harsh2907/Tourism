@@ -8,7 +8,7 @@ import androidx.navigation.findNavController
 import com.example.etourismuttrakhand.R
 import com.example.etourismuttrakhand.ui.feature_main_screen.MainScreen
 import com.example.etourismuttrakhand.ui.login_screen.LoginScreen
-import kotlinx.android.synthetic.main.fragment_main_screen.*
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -24,13 +24,13 @@ class MainActivity : AppCompatActivity() {
             putString("name",name)
         }
 
-        val fragInfo = MainScreen()
-        fragInfo.arguments = bundle
-        supportFragmentManager.beginTransaction().apply {
-            replace(R.id.fragment_container,fragInfo)
-            commit()
-
-        }
+//        val fragInfo = MainScreen()
+//        fragInfo.arguments = bundle
+//        supportFragmentManager.beginTransaction().apply {
+//            replace(R.id.fragment_container,fragInfo)
+//            commit()
+//
+//        }
 
 
 

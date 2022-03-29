@@ -1,81 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.feature_details_screen.presentation.PlaceDetailsFragment">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardSlider"
-        app:cardCornerRadius="6dp"
         android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:cardCornerRadius="6dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_height="250dp">
+        app:layout_constraintTop_toTopOf="parent">
 
-    <androidx.viewpager2.widget.ViewPager2
-    android:layout_width="match_parent"
-    android:layout_height="250dp"
-    android:id="@+id/viewPagerDetails"
-    app:layout_constraintLeft_toLeftOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintRight_toRightOf="parent"
-    android:background="@drawable/curve_shape"
-    />
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPagerDetails"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/curve_shape"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.cardview.widget.CardView>
 
     <ScrollView
-        android:layout_marginTop="4dp"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cardSlider"
-        >
+        app:layout_constraintTop_toBottomOf="@id/cardSlider">
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            >
+            android:layout_height="0dp">
 
 
-    <TextView
-        android:id="@+id/name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:text="Badrinath"
-        android:fontFamily="@font/ananda_namaste"
-        android:textSize="40sp"
-        android:layout_margin="8dp"
-        />
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:fontFamily="@font/ananda_namaste"
+                android:text="Badrinath"
+                android:textSize="40sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/place_desc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:paddingStart="8dp"
-        android:fontFamily="@font/roboto"
-        android:text="@string/demo_desc"
-        android:textAlignment="viewStart"
-        android:textSize="13sp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/name" />
+            <TextView
+                android:id="@+id/place_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/roboto"
+                android:paddingStart="8dp"
+                android:text="@string/demo_desc"
+                android:textAlignment="viewStart"
+                android:textSize="13sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/name" />
 
             <LinearLayout
+                android:id="@+id/dateLL"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/dateLL"
                 android:layout_marginTop="4dp"
                 android:visibility="invisible"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/place_desc"
-                >
+                app:layout_constraintTop_toBottomOf="@id/place_desc">
 
 
                 <TextView
@@ -91,9 +87,6 @@
                     android:textSize="24sp"
                     android:textStyle="bold" />
             </LinearLayout>
-
-
-
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

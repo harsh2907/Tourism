@@ -45,4 +45,9 @@ class TourAdapter:RecyclerView.Adapter<TourAdapter.PlaceViewHolder>() {
     }
 
     override fun getItemCount() = differ.currentList.size
+
+    private var onItemClicked:((Place)->Unit)?=null
+    fun setOnItemClickedListener( listener:(Place)->Unit){
+        onItemClicked = listener
+    }
 }

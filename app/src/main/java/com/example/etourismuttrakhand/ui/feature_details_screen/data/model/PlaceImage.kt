@@ -4,3 +4,7 @@ data class PlaceImage(
     val image: Int,
     val name:String
 )
+
+data class DetailImage(
+    val image: Int
+)

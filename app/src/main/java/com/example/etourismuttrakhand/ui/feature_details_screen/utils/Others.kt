@@ -9,6 +9,8 @@ import androidx.viewpager2.widget.ViewPager2
 import com.example.etourismuttrakhand.R
 import com.example.etourismuttrakhand.ui.feature_details_screen.data.model.PlaceImage
 import com.example.etourismuttrakhand.ui.features_favourite.data_source.entities.Place
+import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 object Others {
 
@@ -120,7 +122,6 @@ val chopta = listOf(
     R.drawable.chopta5,
     R.drawable.chopta6
 )
-
 val bhimtal = listOf(R.drawable.bhimtal1, R.drawable.bhimtal2, R.drawable.bhimtal3)
 val chakrata = listOf(R.drawable.chakrata1, R.drawable.chakrata2, R.drawable.chakrata3)
 val chaukori = listOf(R.drawable.chaukori1, R.drawable.chaukori2, R.drawable.chaukori3)
@@ -248,3 +249,8 @@ object Data {
     val dataSource = listOf(nanital, dehradun, kausani, haridwar, auli, chakrata)
 
 }
+
+
+data class Places(
+    val places:List<Place>
+):Serializable

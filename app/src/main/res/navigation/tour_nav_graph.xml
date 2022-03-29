@@ -9,7 +9,11 @@
         android:id="@+id/placeDetailsFragment"
         android:name="com.example.etourismuttrakhand.ui.feature_details_screen.presentation.PlaceDetailsFragment"
         android:label="fragment_place_details"
-        tools:layout="@layout/fragment_place_details" />
+        tools:layout="@layout/fragment_place_details" >
+        <argument
+            android:name="place"
+            app:argType="com.example.etourismuttrakhand.ui.features_favourite.data_source.entities.Place" />
+    </fragment>
     <fragment
         android:id="@+id/mainScreen"
         android:name="com.example.etourismuttrakhand.ui.feature_main_screen.MainScreen"
@@ -17,10 +21,33 @@
         tools:layout="@layout/fragment_main_screen" >
         <action
             android:id="@+id/action_mainScreen_to_placeDetailsFragment"
-            app:destination="@id/placeDetailsFragment" />
+            app:destination="@id/placeDetailsFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
         <argument
             android:name="name"
             app:argType="string"
             android:defaultValue='"User"' />
+        <action
+            android:id="@+id/action_mainScreen_to_searchResultFragment"
+            app:destination="@id/searchResultFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_out_right"
+            app:popExitAnim="@android:anim/slide_in_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchResultFragment"
+        android:name="com.example.etourismuttrakhand.SearchResultFragment"
+        android:label="fragment_search_result"
+        tools:layout="@layout/fragment_search_result" >
+        <action
+            android:id="@+id/action_searchResultFragment_to_placeDetailsFragment"
+            app:destination="@id/placeDetailsFragment" />
+        <argument
+            android:name="places"
+            app:argType="com.example.etourismuttrakhand.ui.feature_details_screen.utils.Places" />
     </fragment>
 </navigation>

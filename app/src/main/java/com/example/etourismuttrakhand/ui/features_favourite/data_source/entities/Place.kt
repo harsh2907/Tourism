@@ -2,6 +2,7 @@ package com.example.etourismuttrakhand.ui.features_favourite.data_source.entitie
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import java.io.Serializable
 
 //@Entity(tableName = "tour_table")
 data class Place(
@@ -11,4 +12,4 @@ data class Place(
     val image:List<Int>,
     val desc:String,
     val homeStayId:Int
-)
+):Serializable
