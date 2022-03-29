@@ -1,0 +1,32 @@
+package com.example.etourismuttrakhand.ui.feature_main_screen
+
+import androidx.lifecycle.ViewModel
+import com.example.etourismuttrakhand.ui.feature_details_screen.utils.Data
+import com.example.etourismuttrakhand.ui.features_favourite.data_source.entities.Place
+
+
+class MainScreenViewModel:ViewModel() {
+
+    fun loadPopularPlaces():ArrayList<Place> {
+
+        val places = ArrayList<Place>()
+        var cnt: Int = 0
+        while (cnt < 6) {
+            val element = Data.dataSource.random()
+            if (!places.contains(element)) {
+                places.add(element)
+                cnt++
+            }
+        }
+        return places
+    }
+
+    fun searchDestination(q:String):ArrayList<Place>{
+        val places = ArrayList<Place>()
+        Data.dataSource.forEach {
+            if(it.name.startsWith(q))
+                places.add(it)
+        }
+        return places
+    }
+}
