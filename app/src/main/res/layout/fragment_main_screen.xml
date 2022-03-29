@@ -21,7 +21,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-
+                android:src="@drawable/valley"
                 android:background="@drawable/curve_shape"
                 android:scaleType="centerCrop" />
 
@@ -56,6 +56,7 @@
                     android:layout_width  ="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/searchQuery"
+                    android:background="#8a070707"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintRight_toRightOf="parent"
