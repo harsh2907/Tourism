@@ -32,7 +32,6 @@ import kotlinx.coroutines.delay
 class MainScreen : Fragment() {
 
     private lateinit var binding: FragmentMainScreenBinding
-    private val args:MainScreenArgs by navArgs()
     private val viewModel:MainScreenViewModel by viewModels()
 
 
@@ -49,8 +48,12 @@ class MainScreen : Fragment() {
 
         setImages()
         setLowerGrid()
-
-        val name = args.name
+        var name = "User"
+        viewModel.userName.observe(
+            viewLifecycleOwner
+        ){
+            name = it
+    }
         val first = name.substringBefore('/')
         val last = name.substringAfter('/')
 

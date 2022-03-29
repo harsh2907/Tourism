@@ -1,11 +1,16 @@
 package com.example.etourismuttrakhand.ui.feature_main_screen
 
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.etourismuttrakhand.ui.feature_details_screen.utils.Data
 import com.example.etourismuttrakhand.ui.features_favourite.data_source.entities.Place
 
 
 class MainScreenViewModel:ViewModel() {
+
+    private var _userName:MutableLiveData<String> = MutableLiveData("")
+    val userName = _userName
 
     fun loadPopularPlaces():ArrayList<Place> {
 
@@ -28,5 +33,9 @@ class MainScreenViewModel:ViewModel() {
                 places.add(it)
         }
         return places
+    }
+
+    fun updateUserName(name:String){
+        _userName.value = name
     }
 }
