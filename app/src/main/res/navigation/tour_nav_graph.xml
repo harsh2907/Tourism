@@ -3,11 +3,24 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/tour_nav_graph"
-    app:startDestination="@id/placeDetailsFragment">
+    app:startDestination="@id/mainScreen">
 
     <fragment
         android:id="@+id/placeDetailsFragment"
         android:name="com.example.etourismuttrakhand.ui.feature_details_screen.presentation.PlaceDetailsFragment"
         android:label="fragment_place_details"
         tools:layout="@layout/fragment_place_details" />
+    <fragment
+        android:id="@+id/mainScreen"
+        android:name="com.example.etourismuttrakhand.ui.feature_main_screen.MainScreen"
+        android:label="fragment_main_screen"
+        tools:layout="@layout/fragment_main_screen" >
+        <action
+            android:id="@+id/action_mainScreen_to_placeDetailsFragment"
+            app:destination="@id/placeDetailsFragment" />
+        <argument
+            android:name="name"
+            app:argType="string"
+            android:defaultValue='"User"' />
+    </fragment>
 </navigation>

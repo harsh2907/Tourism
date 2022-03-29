@@ -41,6 +41,7 @@ class TourAdapter:RecyclerView.Adapter<TourAdapter.PlaceViewHolder>() {
         val binding = holder.binding
         val item = differ.currentList[position]
         binding.thumbnail.setImageResource(item.image)
+        binding.location.text = item.name
     }
 
     override fun getItemCount() = differ.currentList.size

@@ -6,10 +6,13 @@ import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import com.example.etourismuttrakhand.R
 import com.example.etourismuttrakhand.databinding.ActivityLoginScreenBinding
+import com.example.etourismuttrakhand.ui.MainActivity
 import com.example.etourismuttrakhand.ui.feature_main_screen.MainScreen
 import kotlinx.android.synthetic.main.activity_login_screen.*
+import kotlinx.android.synthetic.main.activity_main.*
 
 class LoginScreen : AppCompatActivity() {
     private lateinit var binding: ActivityLoginScreenBinding
@@ -29,7 +32,10 @@ class LoginScreen : AppCompatActivity() {
                 val name = "$firstName/$lastName"
                 sharedPref.edit().putString("FirstName", name).apply()
                 sharedPref.edit().putBoolean("isLoggedIn", true).apply()
-                startActivity(Intent(this, MainScreen::class.java))
+//                val manager = supportFragmentManager
+//                manager.beginTransaction().replace(R.id.fragment_container, Fragment()).commit()
+
+                startActivity(Intent(this, MainActivity::class.java))
             }else{
                 Toast.makeText(this, "Enter Details", Toast.LENGTH_SHORT).show()
             }

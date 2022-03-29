@@ -11,6 +11,7 @@
         android:theme="@style/Theme.ETourismUttrakhand">
         <activity
             android:name=".ui.login_screen.LoginScreen"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".ui.MainActivity"

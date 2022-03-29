@@ -3,11 +3,12 @@ package com.example.etourismuttrakhand.ui.features_favourite.data_source.entitie
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "tour_table")
+//@Entity(tableName = "tour_table")
 data class Place(
-    @PrimaryKey(autoGenerate = true)
+    //@PrimaryKey(autoGenerate = true)
     var id:Int?=null,
     val name:String,
-    val image:Int,
-    val desc:String
+    val image:List<Int>,
+    val desc:String,
+    val homeStayId:Int
 )
