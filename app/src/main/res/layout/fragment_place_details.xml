@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.feature_details_screen.presentation.PlaceDetailsFragment">
+    tools:context=".ui.feature_details_screen.presentation.components.PlaceDetailsFragment">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardSlider"

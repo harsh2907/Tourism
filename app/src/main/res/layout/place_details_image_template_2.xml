@@ -9,7 +9,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/popularCard1"
         android:layout_width="0dp"
-        android:layout_height="200dp"
+        android:layout_height="wrap_content"
         android:layout_weight="1"
         android:elevation="10dp"
         app:cardCornerRadius="8dp"
@@ -26,9 +26,9 @@
             <ImageView
                 android:id="@+id/thumbnail"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:background="@color/white"
-                android:scaleType="centerCrop"
+                android:scaleType="fitCenter"
                 android:src="@drawable/haridwar6"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"

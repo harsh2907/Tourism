@@ -5,7 +5,7 @@ xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
     android:background="@drawable/kedarnath_potrait"
-tools:context=".ui.login_screen.LoginScreen">
+tools:context=".ui.feature_details_screen.presentation.components.LoginScreen">
 
     <LinearLayout
         android:layout_width="match_parent"
